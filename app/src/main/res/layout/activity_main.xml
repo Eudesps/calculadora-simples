@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_numero1"
+        android:layout_width="100dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="32dp"
+        android:hint="Número"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_numero2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/GuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_numero1"
+            android:layout_width="100dp"
+            android:layout_height="57dp"
+            android:inputType="number|numberDecimal"
+            android:textColor="@color/primaria"
+            android:textColorHint="@color/primaria" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_numero2"
+        android:layout_width="100dp"
+        android:layout_height="81dp"
+        android:hint="Número"
+        app:layout_constraintBottom_toBottomOf="@+id/text_input_numero1"
+        app:layout_constraintEnd_toEndOf="@id/GuiaDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_input_numero1"
+        app:layout_constraintTop_toTopOf="@+id/text_input_numero1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_numero2"
+            android:layout_width="100dp"
+            android:layout_height="57dp"
+            android:inputType="number|numberDecimal"
+            android:textColor="@color/primaria" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Calculadora Simples"
+        android:textColor="@color/secundaria"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuiaEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuiaDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <Button
+        android:id="@+id/buttonCalcularResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textColor="@color/secundaria"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Resultado:"
+        android:textColor="@color/primaria"
+        android:textColorHint="@color/primaria"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/GuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcularResultado" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textColor="@color/primaria"
+        android:textColorHint="@color/primaria"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/GuiaDireita"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/buttonMultiplicar"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="*"
+        android:textColor="@color/secundaria"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSubtrair"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDividir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSubtrair"
+        app:layout_constraintTop_toTopOf="@+id/buttonSubtrair"
+        app:rippleColor="@color/menu_navegacao" />
+
+    <Button
+        android:id="@+id/buttonDividir"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="/"
+        android:textColor="@color/secundaria"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonMultiplicar"
+        app:layout_constraintEnd_toEndOf="@id/GuiaDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiplicar"
+        app:layout_constraintTop_toTopOf="@+id/buttonMultiplicar"
+        app:rippleColor="@color/menu_navegacao" />
+
+    <Button
+        android:id="@+id/buttonSomar"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textColor="@color/secundaria"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSubtrair"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSubtrair"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/GuiaEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/buttonSubtrair"
+        app:rippleColor="@color/menu_navegacao" />
+
+    <Button
+        android:id="@+id/buttonSubtrair"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="-"
+        android:textColor="@color/secundaria"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMultiplicar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSomar"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_numero1"
+        app:rippleColor="@color/menu_navegacao" />
+
+    <TextView
+        android:id="@+id/textSinalEscolhido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="SINAL ESCOLHIDO"
+        android:textColor="@color/menu_navegacao"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtrair" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
