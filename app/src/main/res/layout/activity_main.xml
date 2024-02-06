@@ -12,7 +12,7 @@
         android:layout_height="81dp"
         android:layout_marginTop="32dp"
         android:hint="Número"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_numero2"
+        app:layout_constraintEnd_toStartOf="@+id/text_sinal_simbolo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/GuiaEsquerda"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -34,8 +34,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/text_input_numero1"
         app:layout_constraintEnd_toEndOf="@id/GuiaDireita"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/text_input_numero1"
-        app:layout_constraintTop_toTopOf="@+id/text_input_numero1">
+        app:layout_constraintStart_toEndOf="@+id/text_sinal_simbolo"
+        app:layout_constraintTop_toTopOf="@+id/text_input_numero1"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_numero2"
@@ -44,6 +45,20 @@
             android:inputType="number|numberDecimal"
             android:textColor="@color/primaria" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_sinal_simbolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/secundaria"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_input_numero2"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_numero2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_input_numero1"
+        app:layout_constraintTop_toTopOf="@+id/text_input_numero2" />
 
     <TextView
         android:id="@+id/textView"

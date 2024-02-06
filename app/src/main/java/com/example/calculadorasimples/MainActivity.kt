@@ -14,14 +14,16 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var numeroTwo: TextInputLayout
     private lateinit var editNumero2: TextInputEditText
-
+    //Botões
     private lateinit var botaoSomar: Button
     private lateinit var botaoSubtrair: Button
     private lateinit var botaoMultiplicar: Button
     private lateinit var botaoDividir: Button
     private lateinit var botaocalcular: Button
+
     private lateinit var textoSinalOperacao: TextView
     private lateinit var sinalDaOperacao: String
+    private lateinit var sinalDaOperacaoApresentado: TextView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +33,22 @@ class MainActivity : AppCompatActivity() {
         botaoSomar.setOnClickListener{
             sinalDaOperacao = "somar"
             textoSinalOperacao.text = "SOMAR"
+            sinalDaOperacaoApresentado.text = "+"
         }
         botaoSubtrair.setOnClickListener {
             sinalDaOperacao = "subtrair"
             textoSinalOperacao.text = "SUBTRAIR"
+            sinalDaOperacaoApresentado.text = "-"
         }
         botaoMultiplicar.setOnClickListener {
             sinalDaOperacao = "multiplicar"
             textoSinalOperacao.text = "MLTIPLICAR"
+            sinalDaOperacaoApresentado.text = "*"
         }
         botaoDividir.setOnClickListener {
             sinalDaOperacao = "dividir"
             textoSinalOperacao.text = "DIVIDIR"
+            sinalDaOperacaoApresentado.text = "/"
         }
         botaocalcular.setOnClickListener {
             calcular()
@@ -56,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         numeroTwo = findViewById(R.id.text_input_numero2)
         editNumero2 = findViewById(R.id.text_numero2)
         textoSinalOperacao = findViewById(R.id.textSinalEscolhido)
+        sinalDaOperacaoApresentado = findViewById(R.id.text_sinal_simbolo)
 
         //Iniciando todos os botões da interface
         botaoSomar = findViewById(R.id.buttonSomar)
